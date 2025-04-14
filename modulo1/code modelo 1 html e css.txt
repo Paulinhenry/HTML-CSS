@@ -1,0 +1,139 @@
+HTML:
+!- estrutura base HTML <title>- titulo do site
+<h1>- abre topico
+<p>- abre paragrafo
+<hr>- linha horizontal
+<br>- quebra de linha
+usar & para caracteres especiais para usar emoji- &#x seguido do codigo do emoji
+
+imagens:
+cuidado com o copyright usar sempre imagens liberados
+sites para pesquisar imagens: unsplash e pexels
+usar gimp pra redmensionar imagens
+jpeg imagens grandes - png imagens transparentes
+usar tag <img> para adiconar imagem para selecionar imagem no src só segurar shift+espaço e escrever no alt oque é a imagem
+podemos tbm carregar imagens que estao em subpastas so usar o macete de shit+espaço e selecionar dentro da pasta
+tambem podemos carregar imagen externas usando o url da imagem
+
+favicon:
+sao os simbolos do site la emcima
+site para achar icons de graca : iconarchive e desenhar ele no: favicon.cc
+devem ser convertidos de png para formato ico e para converter usar o favicon.io
+e para usar no html usar na parte <head> a marcacao <link:favicon
+
+hierarquia de titulos:
+h1,h2,h3 sao hierarquias eles vao de h1 à h6
+
+formatacao:
+macet usar control+shift+p abb para usar tags emais rapido
+
+negrito: nao semantico usar tag b, semantico usar a tag strong
+italico: nao semantico usar tag i, semantico usar a tag EM
+marcar texto: usar a tag mark e usar style dentro da tag para usar css e mudar a cor da marcacao e se quiser estabelecer um padrao de cor e so colocar o comando na aba head
+para fazer texto pequeno e grande: usar as tags big obsoleta e small respectivamente]
+texto deletado: usar tag del
+texto inserido: usar tag ins
+texto sobrescrito: usar tag sup x ao quadrado
+texto subscrtito: usar tag sub h20 formula quimica
+usar tag code: para fazer a fonte ficar monoespaçada usado para linha de code e usar a tag pre pra organizar como e visualizado na programacao
+para citaçoes entre aspas: usar tag q
+para citaçoes completas: usar tag blockquote e se quiser colocar o link usar cite dentro da tag
+para explicar abreviaçoes: usar a tag abbr
+para iverter textos: usar bdo e indicar sentido do texto
+
+Listas:
+lista ordenada: usar tag ol e para cada item da lista usar a tag li e podemos mudar o tipo de numercao colocando type dentro da tag ol e tem como definir o numero que começa com start
+listas nao ordenadas: usar a tag ul e igual mmente usar li e podemos mudar o simbulo com type 
+para juntar listas basta apenas inserir uma lista na outra
+lista de definicao: usar a tag dl e usar termos: dt e descricao: dd funciona tipo um dicissionario
+
+Links:
+para usar links externos basta selecionar o texto que vc desaja linkar ao link e usar a tag a e colocar o link desejado e para fazer abrir em uma nova guia usar a tag target blank e rel external
+para usar links internos basta apenas usar a tag a denovo apertar ctrl+espaço e selecionar a pagina desejada e usar rel next e rel prev
+para usar links de patrocionios ou sem saber se a pagina é oficial use sempre rel nofollow
+e da pra usar o target self tbm
+e se tiver uma pagina em outra pasta deverar usar ../ para retornar uma pasta
+para colocar link de downloads basta colocar o link com a tag a e usar tags para download usando: download e nome do arquivo e type application e usar media types
+
+imagens:
+sempre pensar sobre os dispositivos que podem usar o sites mobile: 300x 300 tablet: 700 x 700 pc ou tv: 1000 x 1000
+e para aplicar uma adaptacao na imagem use a tag picture assim
+    <picture>
+        <source media="(max-width: 600px)" srcset="Imagens/ft-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/ft-m.png" type="image/png">
+        <img src="Imagens/ft g.png" alt="imagem grande">
+    </picture>
+e tomar cuidado para nao inverter os source
+
+audio:
+sempre tomar cuidado com direitos autorais site: entrar no youtube e vai no seu painel e blibioteca
+sempre tomar cuidado com o tamanho dos audios
+usar a tag audio com os parametros controls ou autoplay para tocar automaticamente
+USAR MP3 WAV OGG PARA COMPATIBILIDADE PARA MAIS NAVEGADORES usando:
+    <audio>
+        <source src="media/Pink Party - Evening Telecast.mp3" type="audio/mp3">
+        <source src="media/Pink Party - Evening Telecast.wav" type="audio/wav">
+        <source src="media/Pink Party - Evening Telecast.ogg" type="audio/ogg">
+    </audio>
+tentara carregar de cima para baixo
+usar parametros preload meta data recomendado
+e da pra usar loop nos audios
+
+videos:
+lembrar de direitos autorais usar pexels
+existem tipos de arquivos de videos mp3 ogv wb3
+usar handd brake para manipular videos
+cuidadio com videos muitos pesados pode influenciar no custo de hospedagem de site
+de modo mais simples apenas usar a tag video e definir alargura assim <video src="media/Meu-Video-720p60.mp4" width="500" autoplay controls> </video>
+para optimizar o codigo use e usar tag control ou autoplay dentro da tag video
+    <video>
+        <source src="media/Meu-Video-720p60.mp4" type="video/mp4">
+        <source src="media/Meu-Video.webm" type="video/webm">
+    </video>
+use poster para colocar thmb nos videos
+usar apenas videos internos com ciencia do cliente
+videos externos do youtube basta apenas clicar em copartilhar em um video e incorporar e copiar o codigo
+para videos externos privados usar vimeo mesmo procedimento do youtube
+
+CSS inline:
+esse estilo e uma merda
+para comecar usar css inline voce deve usar tag style para cada h1 h2 h3 h4 h5 h6 ou p
+para trocar cor de fundo da pagina ir na tag body e usar a tag style com back ground color
+
+CSS internos:
+desvantagem: ocupa mais espaco no codigo se tiver mais de uma pagina vai ter que copiar tudo
+usar tag style no head e selecionar oq vai ser alterado segue exemplo usando na parte body
+usar em pagina unicas
+
+<style>
+        body {
+            background-color: lightskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+</style>
+para body h1 h2 p
+<style>
+        body {
+            background-color: lightskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            
+        }
+        h1 {
+            color: mediumblue;
+        }
+        h2 {
+            color: darkred;
+        }
+        p {
+            color: black;
+        }
+</style>
+
+CSS external:
+mais usada
+para usar criar arquivo .css e usar tag link:css
+e sempre usar a regra @charset "UTF-8";
+
+o mais poderoso é o inline dps o internal e dps o external ordem de prioridade no caso

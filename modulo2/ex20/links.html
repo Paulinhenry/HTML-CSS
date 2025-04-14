@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+        # = id
+        . = class
+        : = pseudoclasse
+        :: = pseudoelemento
+        > = filho direto
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: aqua;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: blue;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        a:active{
+            color: red;
+        }
+        a::after{
+            content: " (link externo)";
+            font-size: 0.8em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/gustavoguanabara/html-css" target="_blank" rel="external">Github</a></li>
+        <li><a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank" rel="external">Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" rel="external">curso em video</a></li>
+        <p><a href="pseudoclasse.html">retornar aqui</a></p>
+    </ul>
+</body>
+</html>

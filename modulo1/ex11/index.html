@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGENS</title>
+</head>
+<body>
+    <h1>imagem dinamica</h1>
+    <p>abre o site em varios dispositivos diferentes</p>
+
+    <picture>
+        <source media="(max-width: 600px)" srcset="Imagens/ft-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/ft-m.png" type="image/png">
+        <img src="Imagens/ft g.png" alt="imagem grande">
+    </picture>
+
+    <h1>audio no html</h1>
+    <p>aqui vai um audio</p>
+    <!--USAR MP3 WAV OGG PARA COMPATIBILIDADE PARA MAIS NAVEGADORES-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="media/Pink Party - Evening Telecast.mp3" type="audio/mp3">
+        <source src="media/Pink Party - Evening Telecast.wav" type="audio/wav">
+        <source src="media/Pink Party - Evening Telecast.ogg" type="audio/ogg">
+    </audio>
+    <p>inefelizmente o seu navegador nao suporta reproducao de audio <a href="media/Pink Party - Evening Telecast.mp3" target="_blank" rel="external">clique aq para fazer o download do mp3</a></p>
+</body>
+</html>

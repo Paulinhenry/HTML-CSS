@@ -1,0 +1,164 @@
+CORES EM CSS:
+usar codigo das cores para melhor definicao para maior variedade usar codigos HEX(hexadecimais) de cores #6digitos eles vao de 0 1 2 3 4 5 6 7 8 9 a b c d e f usar gimp
+podemos usar rgb tbm (00, 00 , 225) para azul por exemplo 
+da pra usar a matriz saturacao e luminosidade com a tag hsl
+usando vscode da pra escolher a cor no grafico e ainda escolher a transparencia da cor
+usar paleta de cores de no min 3 cores e no max 5 cores
+o contraste de uma cor sempre sera oposta a ele no circulo cromatico
+para selecionar paletas usar: adobe color tbm nesse site da pra pegar a paleta de cores de imagens, paletton da pra ver exemplo de site com as cores selecionadas, coolors
+para capturar cores de imagem usar gimp, da pra usar a extensao colorzilla
+
+Degrade em CSS:
+para usar o degrade use a tag background-image: linear-gradient seguido de orientacao e cores
+dica para configuraçoes globais de css:  * { /* Configuraçaos globais do CSS*/
+        					    height: 100%;
+        				   }
+da para extrair o degrade de imagens atraves do adobe color
+da pra personalizar o degrade usando graus usando xdeg x:angulo
+degrade no body
+ body {
+            background-image: linear-gradient(to right, #0A60F5, #0A16F5, #4B0AF5, #66029E);
+            background-attachment: fixed;
+        }
+para seperar o conteudo para uma pagina em branco usar tag main dentro da tag body e manipulalo no css 
+usar margin auto para semprecentralizar o conteudo
+e para deixar o conteudo dentro dde algo redondinho bonitinho usar border-radius 10 px
+para sombrear a caixinha do conteudo usar box-shadow e colocar seus 3 parametreos em pixel assim box-shadow: 5px 5px 5px #000;
+
+Tipografia:
+basicamente é aprender a aplicar as fontes certas em ocacioes certas
+sites para encontrar fontes: web safe fonts combinations
+para usar fonts so usar fontfamily dentro de style, podemos generalizar a fonte por exemplo usar o estilo e selecionar a sens-serif ou monospace e podemos usar combinacoes de fontes tbm
+sempre tentar carregar as fontes de maneira segura ex: font-family: Arial, Helvetica, sans-serif;
+para colocar tamanho na fonte usar fontsize 
+medidas absolutas: cm, mm, in, px, pt, pc
+medidas relativas: %, em, ex, rem, vw, vh, vmin, vmax
+usaremos em e px 
+para px: usar 16px = 1em
+peso da fonte usar style font-weight podemos usar de 100-900 ou usar lighter normal bold bolder
+da pra usar font-style: italic ou normal
+para usar sublinado é text-decoration
+podemos transformas tudo isso em so um style usando shorthand 
+colocar as caracteristicas da fonte nessa ordem: font-style font-weight font-size font-family
+por exemplo: font: italic lighter 1em Arial, Helvetica, sans-serif;
+
+Fontes externas:
+usar google fonts
+de 3 a 4 fontes sao suficientes para um site
+para usar fonte externas abaixadas é so criar uma regra no css chamada @font-face
+exitem varios formatos de fontes
+@font-face {
+            font-family: 'Heartless';
+            src: url(Heartless.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+capturando fontes de sites:
+se tiver em um site usar fonts ninja
+se tiver em uma imagem usar os sites font finders, font squirrel e o my fonts
+
+Alinhamento de texto:
+so usar text-align
+para dar espaçco depois de dar um paragrafo usar text-indent
+
+ID em CSS:
+seletores: para selecionar usar id="" dentro da tag que vc quer selecionar assim: <h1 id="principal"> e depois na parte de style usar h1#principal
+vc so pode selecionar uma tag
+
+Class em CSS:
+para selecionar usar class="" dentro da tag que vc quer selecionar assim: <h1 class="principal"> e depois na parte de style usar .principal nao precisa colocar o elemento
+um elemento pode ter mais de uma classe
+
+e podemos usar os dois ao mesmo tempo
+
+Pseudo classes:
+representada por : 
+elas sao : hover(ao passar o mouse por cima ela ativa a pseudo classe hover)
+podemos esconder textos tbm usando sobreposicao de tags exemplo para esconder:
+div > p{				para quando passar o mouse aparecer: div:hover > p{
+            display: none;
+        }
+
+links em pseudo classes:
+tem como diferenciar um site ja visitado de um nao visitado usando a pseudo classe: a:visited
+para mudar algo quando clicar usar a:active
+tem como fazer aparecer coisas depois dos links com a::after e para antes: a::before
+
+Modelo de Caixas:
+h1 é uma caixa e podemos customizar a caixa com css para faer uma caixa usar tag border e usar padding para distanciar a borda e pra separar as bordas usar margin para fazer um contorno usar outline
+todas as tags que quebram linha sao box-level e as demais sao inline-level
+user agent: navegador
+usar devtools para ver as configs do site
+usando shorthands(simplificações): border: 10px solid lightgray; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px auto; outline: 10px groove salmon;
+							         padding: 10px		       margin: 10px
+da pra fazer elemntos inline aparecer como block usando a tag display: block e visse versa 
+
+Grouping tags:
+dentro da tag body podemos organizar melhor nosso site agrupando os conteudos para cabeçalho usar <header> para conteudo principal usar <main> e para rodape <footer>
+header: usar nav 
+main: usar section e dentro de section article
+footer: é footer
+
+Shadow em caixas:
+usar tag shadow-box: 1px 1px 1px black sempre
+da pra configurar a sombra pelo devtools
+
+Para arredondar caixas usar border-radius
+e pra fazer uma bola  usar border-radius 50%;
+
+Bordas decoradas:
+para usar bordas decoradas usar 
+	border-image-source: url(borda.png);
+        border-image-slice: 20;
+        border-image-repeat: repeat;
+depois de ter criado a borda normalmente
+da pra usar short hands na ordem border-image: url(borda.png) 27 repeat;
+
+Projeto:
+primeiro=layout usar mockflow
+dividir em header para cabeçalho, nav para menu, main para conteudo,article dentro de main para inserir conteudo e aside para conteudo extra/curiosidades e pra finalizar footer primeiro estruturar todo o html e suas tags organizadamente e depois o css
+macete para usar em css é a pseudoclasse :root para predefinir cores assim:
+:root{
+    --cor-fundo: #ceffdc;
+    --cor-texto: #000000;
+    --cor-texto-escuro: #458657;
+    --cor-texto-cinza: #3E5C47;
+    --cor-texto-cinza-esverdeado: #2B332D;
+}
+e aplicar assim: 
+header > h1{
+    color: var(--cor-texto-escuro)
+}
+isso sao variaveis
+para usar configuraçoes globais usar *
+*{
+    margin: 0;
+    padding: 0;
+}
+
+largura ideal: 800 a 1000 de max
+usar margin: auto; e width: 800 ou 1000
+mas usar esses:
+min-width:320px
+max-width:800px
+e para imagens em responsividade usar:
+	    <picture>
+                <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+                <img src="imagens/irina-blok.jpg" alt="">
+            </picture>
+para videos isolar o video em uma div e adicionar uma class e mexer no css assim:
+div.video {
+    background-color: var(--cor-texto-escuro);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}

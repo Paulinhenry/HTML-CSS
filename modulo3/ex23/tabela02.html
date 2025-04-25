@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas grandes</h1>
+    <!--
+        Hierarquia de tabelas grandes
+        TABLE=> TABELA
+                    THEAD
+                      TR TD TH
+                    TBODY
+                      TR TD TH
+                    TFOOT
+                      TR TD TH                
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Populacao</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sao Paulo</td>
+                <td>45 919 911</td>
+            </tr>
+            <tr>
+                <td>Minas gerais</td>
+                <td>21 322 691</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro</td>
+                <td>17 219 679</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td>14 850 513</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td>8 058 441</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do sul</td>
+                <td>11 229 915	</td>
+            </tr>
+            <tr>
+                <td>Parana</td>
+                <td>11 824 665	</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total de Habitantes</td>
+                <td>212 583 750</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

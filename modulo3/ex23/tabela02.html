@@ -11,6 +11,7 @@
         table{
             width: 400px;
             border-collapse: collapse;
+            position: relative;
         }
         caption{
             font-size: 1.3em;
@@ -26,9 +27,21 @@
             text-align: left;
             vertical-align: middle;
         }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(34, 34, 34);
+        }
         thead, tfoot{
             background-color: rgb(34, 34, 34);
             color: white;
+        }
+        tbody > tr:nth-child(2n){
+            background-color: grey;
+            font-weight: bold;
+        }
+        p{
+            font-size: 2em;
         }
     </style>
 </head>
@@ -82,6 +95,11 @@
                 <td>Parana</td>
                 <td>11 824 665	</td>
             </tr>
+            <tr>
+                <td>OMGG</td>
+                <td>200000</td>
+
+            </tr>
         </tbody>
         <tfoot>
             <tr>
@@ -90,5 +108,7 @@
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ex neque distinctio voluptates velit molestias laborum vel exercitationem, est explicabo sed veritatis error doloremque maxime sequi quae quia sapiente necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui maiores eaque dignissimos corporis culpa maxime sed laboriosam non quaerat? Rerum quod odit sequi ratione inventore? Laboriosam id ut cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde facere culpa tempore voluptatum omnis rerum quam atque explicabo doloribus velit vel, iste non totam quae saepe ratione voluptate iure?</p>
 </body>
 </html>

@@ -1,0 +1,123 @@
+Hospedagem: da para hospedar gratuitamente no github pages
+da pra criar um qr code do site
+
+git e github: da pra colocar projetos na nuvem e acessalos remotamente
+
+imagem de fundo:
+existem 3 tipos de fundo
+a priemira é usar o background color a segunda é usar o backgroun-image: linear gradient(to up, blue, yellow)
+e a utima usando imagens com background-image: url
+tamanho da imagem para colocar no fundo assim como no cap 6
+usar back ground size para definir o tamanho da imagem de fundo
+e usar background-repeat: no-repeat para a imagem nao repetir
+e repeat x e repeat y para eixo x e eixo y
+usar background-position para definir posicao da imagem
+para definir o tamanho do background image usar background-size: 100% 100%; porem fica feio usar: background-size: cover;
+da para usar esse estilo background-attachment: scroll; para a imagem esticar e background-attachment: fixed; para ela nao mudar
+usando shorthand shorthand - back ground
+             color > image > position > repeat > size > attachment
+
+Centralizaçao vertical de caixas
+usar position relative e position absolute
+#container{
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: relative;
+            padding: 10px;
+            height: 96vh;
+            background-color: purple;
+        }
+        #conteudo{
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute;
+            height: 200px;
+            background-color: yellow;
+            width: 400px;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            /*transform: translate(-50%, -50%);*/
+        }
+    </style>
+</head>
+<body>
+    <section id ="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+
+tabelas em site:
+
+Hierarquia de tabelas:
+       table= TABLE=> TABELA
+             tr= TABLE ROW= > LINHA DA TABELA
+                TABLE HEADER => CABEÇALHO DA TABELA
+             td=  TABLE DATA => CELULA DA TABELA
+ex:
+<table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+</table>
+
+da para alinhar tabelas com text allign e vertical allign
+
+Hierarquia de tabelas grandes
+        TABLE=> TABELA
+		CAPTION
+                    THEAD
+                      TR TD TH
+                    TBODY
+                      TR TD TH
+                    TFOOT
+                      TR TD TH 
+
+usar caption para colocar legenda
+usar scope nas th para especificar a direçao do titulos
+
+efeito zebrado:
+para usar efeito zebrado usar a pseudo classe: tbody > tr:nth-child(2n)
+
+Cabeçalho fixo de tabalas grandes:
+usar thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(34, 34, 34);
+
+Mesclagem de celulas:
+usar essa tag para o B ocupar duas colunas: <td colspan="2">B</td>
+usar essa tag para o D ocupar tres linhas: <td rowspan="3">D</td>
+
+se vc precisar destacar uma coluna usar colgroup:
+<colgroup>
+            <col class="Área">
+            <col class="Disciplinas">
+            <col class="Notas">
+            <col class="media">
+</colgroup>
+e depois manipular no css
+e da pra usar o colspan para selecionar mais de uma tbm
+
+tabelas responsiveis:
+envelopar a tabela com uma div e usar:
+div#container{
+            overflow-x: auto;
+        }

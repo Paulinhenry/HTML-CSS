@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body {
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Para dispositivos móveis em modo paisagem*/
+@media (orientation: landscape) {
+    body {
+        background-color: lightgreen;
+        color: black;
+    }
+}
+
+/* Para dispositivos móveis em modo portrato*/
+@media (orientation: portrait) {
+    body {
+        background-color: lightcoral;
+        color: white;
+    }
+}

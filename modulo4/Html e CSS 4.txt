@@ -1,0 +1,132 @@
+IFRAME:
+é basicamente abrir um site dentro do seu site usando <iframe>
+existe sites que tem proteçao que impede a exportaçao para seu site]
+configuraçao: TAMANHO PADRÃO 300x150 e usar uma tag <a> dentro do iframe para dispositivos não compativeis da para tirar a rolagem da pagina em alguns navegadores usando scolling="no"
+e borda configurar no css
+Navegacão em iframe: vc seleciona a pagina que vai carregar no espaço vc tem que usar uma tag name dentro de iframe para usa-lo: assim <iframe src="#" id="tela" name="frame">
+depois fazer uma lista com as opcoes com links das paginas e usar target: name que foi colocado assim:
+<ul>
+     <li><a href="paginas-extras/page001.html" target="frame">Primeira pagina</a></li>
+     <li><a href="paginas-extras/pade002.html" target="frame">Segunda Pagina</a></li>
+     <li><a href="paginas-extras/page003.html" target="frame">Terceira Pagina</a></li>
+</ul>
+e para deixar algo escrito no iframe usar srcdoc assim:
+<iframe srcdoc="<h1> escolha uma das opções acima</h1>" id="tela" name="frame">
+
+Para aumentar a segurança do iframe usar: sandbox="sandbox" assim:
+<iframe src="paginas-extras/page004.html" frameborder="1" sandbox="sandbox"> mas tem como deixar menos limites permitindo algumas ações do usuario ex: sandbox="allow-forms allow-scripts allow-same-origin">
+e tambem o : referrerpolicy="no-referrer"
+
+Usar iframes para colocar videos, mapas e documentos do google docs dentro do site
+
+
+
+
+Formularios:
+usar tag form e dentro de form uma tag p para indentificar o formulario em seguida usar input para adicionar espaço para preencher formulario e definir o tipo de formulario
+<form action="">
+        <p>Nome: <input type="text" name="" id=""></p>
+        <p>Sobrenome: <input type="text" name="" id=""></p>
+</form>
+
+para ligar o p ao input usar a tag label e colocar o id do input desejado assim
+<form action="cadastro.php" autocomplete="off">
+        <p><label for="nome">Nome:</label> <input type="text" name="nome" id="nome"></p>
+        <p><label for="nome">Sobrenome:</label> <input type="text" name="sobrenome" id="sobrenome"></p>
+        <input type="submit" value="Enviar">
+</form>
+usar sempre label
+existem dois tipos de envios de dados o get e o post 
+Get:deixa no url do site os dados enviados e é compartilhavel
+Post:não aparece no url do site usar para dados sensiveis
+
+para senhas usar input password
+
+para fazer o formulario ser obrigatorio usar required dentro de input
+
+para definir minimo e maximo de caracteres usar minlength="3" maxlength="20" respectivamente
+
+para dar dica de onde é o formulario usar placeholder
+
+para usar autocomplete de dados usar autocomplete on na tag form e especificar o autocomplete na tag input
+
+Usar step em input number para definir espaço entre os numeros ex: <input type="number" name="media" id="media" min="0" max="10" step="0.5">
+
+Voce consegue agrupar os inputs com fieldset e colocar legenda com legend
+
+Usar input: type:"checkbox" para caixinhas
+
+Usar input: type:"radio" para bolinhas e colocar o mesmo nome no input para selecionar um ou outro
+
+para usar barras de satisfaçao usar range
+
+Para usar um formulario para enviar arquivos usar method:"post" <input type="file" name="foto" id="foto">
+
+usar a tag select dentro de form para colocar options
+
+E da para agrupar as opções assim:
+		<optgroup label="Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+
+usar data list para fazer sugestoes em input texts assim não esquece de ligar a lista no input
+	    <label for="prof">Profissão</label>
+            <input type="text" name="prof" id="prof" list="proflist" placeholder="Digite sua profissão" required>
+            <datalist id="proflist">
+                <option value="ADM">Administrador</option>
+                <option value="ENG">Engenheiro</option>
+                <option value="MED">Médico</option>
+                <option value="PROF">Professor</option>
+                <option value="TÉC">Técnico</option>
+                <option value="OUTRO">Outro</option>
+            </datalist>
+
+output é para retornar valores no programa com javascript
+
+Media Queries:
+media types:
+são adaptações do site para certas medias
+usar css para criar media queries
+especificar no link css para qual tipo de media será utilizado 
+assim:
+<link rel="stylesheet" href="estilos/tela.css" media="screen">
+<link rel="stylesheet" href="estilos/impressora.css" media="print">
+
+media features:
+são as adaptações sobre o tamnho da tela
+para adaptar sobre a orientação da tela
+usar assim:
+<link rel="stylesheet" href="estilos/empe.css" media="screen and (orientation: portrait)">
+<link rel="stylesheet" href="estilos/deitado.css" media="screen and (orientation: landscape)">
+
+Da para especificar todas as configs em um unico CSS usando @media seguido da orientação 
+assim:
+@media (orientation: portrait)
+@media (orientation: landscape)
+
+Mobile first:
+é o fato de começar a criação de seu website pensando primeiro no mobile isso ajuda em muitas coisas
+é necessario saber os breackpoints dos projetos 
+Typical device breakpoints
+----------------------------------------
+pequenas telas: até 600px
+Celuar: de 600px até 768px 
+Tablet: de 768 até 992px
+Desktop: de 992px até 1200px
+TV ou grandes telas: acima de 1200px
+
+Menu Responsivo:
+para pegar icones usar google icons
+para fazer o menu responsivel é necessario usar JavaScript
+Usar calc em css para adaptar
+usar transform no CSS na ultima linha 
+
+

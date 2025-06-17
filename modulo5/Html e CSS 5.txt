@@ -1,0 +1,50 @@
+FlexBox:
+flexbox é o jeito de encaixar os containers 
+diferenciar o flex-containers= displa:flex e os flex-itens=flex:comando
+para os itens preencherem o container igual agua usar flex:auto
+flex-direction: existem 4 direções a padrão é a row, row-reverse, column, column-reverse
+Eixos(axis):
+main-axis da esquerda pra direita em row, cross-axis de cima para baixo em row.
+main-axis da direita pra esquerda em row-reverse, cross-axis de cima para baixo em row-reverse.
+main-axis vai de cima para baixo em column, cross-axis vai da esquerda pra direita em column.
+main-axis vai de baixo para cima em column-reverse, cross-axis vai da esquerda para direita em column-reverse
+flex-wrap: nowrap; padão
+flex-wrap: wrap; vai fazer o conteudo quebrar em direção ao cross-axis
+flex-wrap: wrap-reverse; vai fazer o conteudo quebrar em direção oposta ao cross-axis
+
+PROPRIEDADE flex-direction + flex-wrap = flex-flow: row wrap; = exemplo
+
+usar flex: auto; ele vai descer sem espaço em branco
+
+justify-content: alinhar no eixo principal
+flex-start; o primeiro item vai colar no começo e o espaço em branco vai colar no final
+flex-end; vai ser o contrario do start
+center; vai fazer um espaçamento igual entre o começo e o final do container
+space-between; vai fazer um espaçamento entre os itens com os itens colados no inicio e final do container
+space-evenly;  vai fazer um espaçamento entre os itens com um espaçamento no começo e no final do container
+space-around; vai dividir o container de acordo com a quantidade de itens e depois alinhar os itens no centro dessas divisões
+
+align-items: alinhar no eixo transversal
+stretch; estica os itens padrão
+flex-start; vai colar no cross-start
+flex-end; vai colar no cross-end
+center; vai centralizar os itens na alturas
+
+Centralização com flex-box
+usar justfy-content:center;
+usar align-items:center;
+
+align-content:decidir oque vai acontecer com a parte em branco do container
+align-content: stretch; vai esticar os itens após a quebra é o padrão
+align-content: flex-start; vai colocar os itens no cross-start após a quebra
+align-content: flex-end; vai colocar os itens no cross-end após a quebra
+align-content: center; vai colocar os itens no meio do container entre o cross-start e o cross-end após a quebra
+align-content: space-between; vai colocar a parte vazia entre os itens após a quebra
+align-content: space-evenly; vai espaçar os itens igualmente após a quebra
+align-content: space-around; vai centralizar os itens em 2 areas iguais após a quebra
+
+
+
+
+
+  
